@@ -32,3 +32,5 @@ Using Ubuntu Server OS
 3. BookLore
     - host and manage books
 
+# Sources/ Resources
+[awesome-selfhosted](https://awesome-selfhosted.net/)
