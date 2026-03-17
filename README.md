@@ -28,7 +28,7 @@ Using Ubuntu Server OS
 # Planned Implementations
 1. Jellyfin Media Server
 2. Photo Galleries
-  - replacement for google photos
+    - replacement for google photos
 3. BookLore
-  - host and manage books
+    - host and manage books
 
