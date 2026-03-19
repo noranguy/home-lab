@@ -36,7 +36,7 @@ To allow for connecting my server/devices to my domain, I used **cloudflare tunn
 
 This was the route I choose because my main router is unreachable. Additionally, I struggled with traditional port forwarding setup.
 
-for more detail & setup, go to [cloudflare tunneling setup](https://noranguy.github.io/home-lab/Cloudflare-Setup)
+for more detail & setup, go to [cloudflare tunneling setup](https://noranguy.github.io/home-lab/cloudflare-setup/)
 
 # Planned Implementations
 1. Jellyfin Media Server
