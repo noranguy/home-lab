@@ -1,6 +1,5 @@
 site_name: nico's homelab docs
 theme:
-  favicon: images/favicon.jpg
   name: readthedocs
   palette:
     primary: 'blue'
@@ -10,7 +9,8 @@ theme:
     - navigation.instant
     - navigation.tracking
   color_mode: auto
-
+extras:
+  favicon: images/favicon.jpg
 nav:
   - Home: index.md
   - About: about.md

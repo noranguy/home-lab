@@ -33,7 +33,7 @@ I mainly use it for file storage but it includes integrated apps for calendars, 
 
 For my setup, I mounted external drives to my server to allow for me to practice with mounting, expansion, and backups
 
-For more detail & setup, go to [Nextcloud Setup](https://noranguy.github.io/home-lab/server-setup/nextcloud/)
+For more detail & setup, go to [Nextcloud Setup](https://noranguy.github.io/home-lab/nextcloud/)
 
 ### Proxy Managing & Cloudflare
 To increase security (HTTPS) and setup access outside of my local network, I purchased a domain from cloudflare.
@@ -42,7 +42,7 @@ To allow for connecting my server/devices to my domain, I used **cloudflare tunn
 
 This was the route I choose because my main router is unreachable. Additionally, I struggled with traditional port forwarding setup.
 
-For more detail & setup, go to [Cloudflare Tunneling Setup](https://noranguy.github.io/home-lab/server-setup/cloudflare/)
+For more detail & setup, go to [Cloudflare Tunneling Setup](https://noranguy.github.io/home-lab/cloudflare/)
 
 ### General Achievements
 - Connected/ mounted external storage devices to access through nextcloud
