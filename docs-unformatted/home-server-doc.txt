@@ -1,0 +1,106 @@
+
+setup (3/15/26)
+- 2017 HP all in one pavilion, 1TB internal hard drive
+- 1 3TB SSD
+- 1 256 SSD
+
+OS: linux server => Ubuntu Server
+Cloud: nextcloud
+storage: SSD
+Access: web, phone, desktop app
+
+1. Install Ubuntu Server, flash to CD or USB, Boot (f2/f12), Install
+
+2. Install nextcloud
+- sudo snap install nextcloud (snap allows for easy install)
+
+can open nextcloud using http://(ip address)
+
+3. Mount SSD and disks
+- lsblk
+- sudo mount /dev/drive /mnt/filepath
+
+4. got domain using cloud flare to configure https and access through internet
+
+permissions
+sudo chown -R root:root /mnt/backup
+sudo chmod -R 770 /mnt/backup
+
+scripts
+256 - backup /mnt/backup
+#!/bin/bash
+DATE=$(date +%Y-%m-%d)
+BACKUP_DIR="/mnt/backup/nextcloud-$DATE"
+mkdir -p "$BACKUP_DIR"
+
+echo "Starting Nextcloud backup: $DATE"
+
+# Enable maintenance mode
+sudo nextcloud.occ maintenance:mode --on
+
+# Backup data
+rsync -avz /mnt/storage/ "$BACKUP_DIR/data/"
+
+# Backup config
+rsync -avz /var/snap/nextcloud/common/nextcloud/config/ "$BACKUP_DIR/config/"
+
+# Backup database
+sudo nextcloud.export -abc "$BACKUP_DIR/database"
+
+# Disable maintenance mode
+sudo nextcloud.occ maintenance:mode --off
+
+echo "Backup complete: $BACKUP_DIR"
+sudo nano /usr/local/bin/nextcloud-backup.sh
+
+executable
+sudo chmod +x /usr/local/bin/nextcloud-backup.sh
+every sunday at 2am
+(sudo crontab -l 2>/dev/null; echo "0 2 * * 0 /usr/local/bin/nextcloud-backup.sh >> /var/log/nextcloud-backup.log 2>&1") | sudo crontab -
+
+3tb - storage /mnt/next2
+
+command to power off screen after some time
+sudo setterm --blank 1 --powerdown 2 --powersave powerdown
+
+when power goes out.
+sudo snap set nextcloud ports.http=80 ports.https=443
+sudo snap connect nextcloud:removable-media :removable-media
+sudo snap restart nextcloud
+
+sudo chown -R root:root /mnt/next2
+sudo chmod -R 775 /mnt/next2
+
+sudo nextcloud.occ files:scan --all
+
+adding new drives
+sudo blkid /dev/sdX1
+```
+Then add a line like this to `/etc/fstab`:
+```
+UUID=your-uuid-here  /mnt/next2  ext4  defaults,nofail  0  2
+
+reboot script
+sudo nano /etc/rc.local
+
+updating file perms
+sudo chown -R www-data:www-data /mnt/storage
+sudo chown -R www-data:www-data /mnt/backup
+sudo chmod -R 775 /mnt/storage
+sudo chmod -R 775 /mnt/backup
+
+storage check
+sudo du -sh /var/snap/nextcloud/common/nextcloud/data/
+
+rm folder and its subdir
+sudo rm -rd /dir/name
+
+drive orders
+sda - internal storage
+sda3
+sdb - 256 ssd (sdb1) /mnt/backup
+sdc - 3 tb (sdc2) /mnt/storage
+
+ fix for permissions
+sudo chown -R root:root /mnt/storage
+sudo chmod -R 775 /mnt/storage

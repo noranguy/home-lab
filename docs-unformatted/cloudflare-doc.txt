@@ -1,0 +1,65 @@
+documenting for https/ tunneling/ cloud flare
+
+Got a travel router as a subnet 
+
+current setup is 
+main internet => travel WAN => travel LAN => LAN switch => my devices
+
+My travel router is a GL.inet ac1300
+
+I used cloudflare tunnel. securely exposes local devices to the intenet without public IP to cloud flare instead of my main router
+
+for my situation, my main router is unreachable. cloudflare tunnel allowed me to connect my devices to cloudflare that allows me to access my server apps through an https link and not exposing my ip
+
+cloudflared created a tunnel to the cloudflare network
+
+sources:
+https://developers.cloudflare.com/tunnel/
+
+commands ran in order and descriptions
+# installed cloudflared
+curl -L https://pkg.cloudflare.com/cloudflare-main.gpg | sudo tee /usr/share/keyrings/cloudflare-main.gpg
+sudo apt install cloudflared
+
+# logged in
+cloudflared tunnel login
+
+# created tunnel
+cloudflared tunnel create nextcloud
+# this gave me a tunnel id i used to configure the config file
+
+#edit and create config file
+sudo nano /etc/cloudflared/config.yml
+
+// config.yml file contents
+tunnel: YOUR_TUNNEL_ID
+credentials-file: /etc/cloudflared/YOUR_TUNNEL_ID.json
+
+ingress:
+  - hostname: nicos-server.org
+    service: http://localhost:80
+  - service: http_status:404
+//
+# create record so my domain is routed to the tunnel which is connected to my home-server/ file server
+cloudflared tunnel route dns nextcloud nicos-server.org
+
+# created a CNAME record in your Cloudflare DNS pointing your domain to the tunnel.
+
+# running tunnel as a service so it can start automatically on a boot
+sudo cloudflared service install
+sudo systemctl start cloudflared
+sudo systemctl enable cloudflared
+
+# checking status
+sudo systemctl status cloudflared
+
+errors ran into
+- had some 1016 errors due to records being configured wrong which messed with my DNS settings
+- ran into port forwarding issue but then came across cloudflare tunneling which fixed them entirely
+
+what i learned
+DNS or domain name system is distributed naming system that takes domain names to ip addresses. 
+1 user requests
+2 host files are checked
+3 query is run and searhed to find dns if not found locally
+4 returns ip to computer
