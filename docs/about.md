@@ -4,6 +4,7 @@ Mainly just playing with homelab/ server hosting! A personal project started 3/1
 A journel of sorts of my process
 ## DNS/ Cloudflare
 DNS or domain name system is distributed naming system that takes domain names to ip addresses. 
+
 1. user requests
 2. host files are checked
 3. query is run and searhed to find dns if not found locally

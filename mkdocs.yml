@@ -1,16 +1,16 @@
 site_name: nico's homelab docs
 theme:
-  name: readthedocs
+  name: material
   palette:
     primary: 'blue'
-    accent: 'light blue'
+    accent: 'dark blue'
+    mode: dark
   features:
     - navigation.tabs
     - navigation.instant
     - navigation.tracking
-  color_mode: auto
-extras:
-  favicon: images/favicon.jpg
+  color_mode: dark
+  favicon: img/favicon.ico
 nav:
   - Home: index.md
   - About: about.md
