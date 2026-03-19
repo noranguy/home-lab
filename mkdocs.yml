@@ -1,0 +1,13 @@
+site_name: nicos-home-lab-docs
+theme:
+  name: readthedocs
+  palette:
+    primary: 'blue'
+    accent: 'light blue'
+  features:
+    - navigation.tabs
+    - navigation.instant
+    - navigation.tracking
+nav:
+  - Home: index.md
+  - About: about.md
