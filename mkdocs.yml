@@ -1,5 +1,6 @@
-site_name: nicos-home-lab-docs
+site_name: nico's homelab docs
 theme:
+  favicon: images/favicon.jpg
   name: readthedocs
   palette:
     primary: 'blue'
@@ -8,7 +9,12 @@ theme:
     - navigation.tabs
     - navigation.instant
     - navigation.tracking
+  color_mode: auto
+
 nav:
   - Home: index.md
   - About: about.md
-  - Cloudflare Setup: cloudflare-setup.md
+  - Server Setup: 
+    - Server: server-setup.md
+    - Nextcloud: nextcloud-setup.md
+    - Cloudflare: cloudflare-setup.md

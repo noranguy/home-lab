@@ -8,6 +8,7 @@ DNS or domain name system is distributed naming system that takes domain names t
 2. host files are checked
 3. query is run and searhed to find dns if not found locally
 4. returns ip to computer
+
 # Errors I ran into
 ## DNS/ Cloudflare
 - had some 1016 errors due to records being configured wrong which messed with my DNS settings

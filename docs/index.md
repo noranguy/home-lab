@@ -6,18 +6,18 @@ Currently in the bare bones beginning of this setup.
 
 # Setup
 - 2017 HP Pavilion All-In-One Desktop
-  - Intel Core i5
-  - 1TB HDD
-  - Windows 10
-  - Using Ubuntu Server OS
+    - Intel Core i5
+    - 1TB HDD
+    - Windows 10
+    - Using Ubuntu Server OS
 - 3TB HD HDD
-  -  USB connected
+    -  USB connected
 - 256 SSD
     - USB connected
 - GL. inet ac1300 Travel Router
 - NetGear GS605 LAN Switch
 - QNAP HDD SATA enclosure (not in use)
-   - No drives yet
+    - No drives yet
 
 # Current Implementations
 ## Physical Implementations
@@ -25,10 +25,16 @@ Currently in the bare bones beginning of this setup.
 - Setup Ubuntu OS flashed through a CD
 - Configured SFTP & SSH
 ## Nextcloud File Storage
-### General Achievements
-- Connected/ mounted external storage devices to access through nextcloud
-- Setup up backup drives and back up scripts
-- Reboot script to ensure security and precautions for power outages
+**Nextcloud** goal is regain control over data. It is an open source google drive alternative which allows for selfhosting.  It gives the user full control over files without sending data to 3rd parties.
+
+Additionally, it allows for **file sync** and *file sharing* between other clients.
+
+I mainly use it for file storage but it includes integrated apps for calendars, contacts, calls, etc.
+
+For my setup, I mounted external drives to my server to allow for me to practice with mounting, expansion, and backups
+
+For more detail & setup, go to [Nextcloud Setup](https://noranguy.github.io/home-lab/server-setup/nextcloud/)
+
 ### Proxy Managing & Cloudflare
 To increase security (HTTPS) and setup access outside of my local network, I purchased a domain from cloudflare.
 
@@ -36,7 +42,12 @@ To allow for connecting my server/devices to my domain, I used **cloudflare tunn
 
 This was the route I choose because my main router is unreachable. Additionally, I struggled with traditional port forwarding setup.
 
-for more detail & setup, go to [cloudflare tunneling setup](https://noranguy.github.io/home-lab/cloudflare-setup/)
+For more detail & setup, go to [Cloudflare Tunneling Setup](https://noranguy.github.io/home-lab/server-setup/cloudflare/)
+
+### General Achievements
+- Connected/ mounted external storage devices to access through nextcloud
+- Setup up backup drives and back up scripts
+- Reboot script to ensure security and precautions for power outages
 
 # Planned Implementations
 1. Jellyfin Media Server
