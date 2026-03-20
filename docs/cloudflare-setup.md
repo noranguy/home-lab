@@ -1,4 +1,4 @@
-# commands ran in order and descriptions
+# Cloudflare Setup
 ## Installed cloudflared
 ```Bash
 curl -L https://pkg.cloudflare.com/cloudflare-main.gpg | sudo tee /usr/share/keyrings/cloudflare-main.gpg
