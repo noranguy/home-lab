@@ -31,11 +31,11 @@ theme:
     code: Roboto Mono
 nav:
   - Home: 
-    - Home: home.md
-    - Current Implementations: current-implementations.md
-    - Planned Implementations: planned-implementations.md
-  - About: about.md
+    - Home: home/home.md
+    - Current Implementations: home/current-implementations.md
+    - Planned Implementations: home/planned-implementations.md
+  - About: blog/about.md
   - Server Setup: 
-    - Server: server-setup.md
-    - Nextcloud: nextcloud-setup.md
-    - Cloudflare: cloudflare-setup.md
+    - Server: server-setup/server-setup.md
+    - Nextcloud: server-setup/nextcloud-setup.md
+    - Cloudflare: server-setup/cloudflare-setup.md
