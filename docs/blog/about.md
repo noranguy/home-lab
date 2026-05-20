@@ -12,6 +12,14 @@ DNS or domain name system is distributed naming system that takes domain names t
 ## Nextcloud
 Make sure to test without having much files in the server yet. A lot of trial and error with some random test files were lost, but it allowed me to feel more confident building a server where I won't lose my files.
 I learned about mounting and unmounting. Additionally, I learned about creating scripts and execs to run. Finally, I learned nextcloud is an overall all-in-one jack of all trades, master of none. After more research, I might consider switching to seafile.
+## Docker
+## Tunneling
+## Reverse Proxy
+## Mounting/ Unmounting
+## Useful Tools
+## Tailscale/ VPN Config
+## Hardware Specs
+## RAID
 # Errors I ran into
 ## DNS/ Cloudflare
 - had some 1016 errors due to records being configured wrong which messed with my DNS settings

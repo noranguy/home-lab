@@ -30,7 +30,10 @@ theme:
     text: Roboto
     code: Roboto Mono
 nav:
-  - Home: index.md
+  - Home: 
+    - Home: home.md
+    - Current Implementations: current-implementations.md
+    - Planned Implementations: planned-implementations.md
   - About: about.md
   - Server Setup: 
     - Server: server-setup.md
