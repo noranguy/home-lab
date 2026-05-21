@@ -1,4 +1,5 @@
 site_name: nico's homelab docs
+site_url: https://noranguy.github.io/home-lab/
 theme:
   name: material
   palette:
