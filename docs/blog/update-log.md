@@ -15,3 +15,6 @@ Current plans are to slow down with the services I am adding.
 I do want to implement ad blocking throughout my network and the infamous *arr stack, but I realize I should start actively using my services before I continue to add more.
 Additionally, I really wish to upgrade my specs. The drive failure scares were a warning to me that I should look to more suitable options. I plan on replacing my main processing unit with a more suitable and newer device like a Dell optiplex. Afterwards, I want to upgrade my older NAS to a QNAP DAS as I do not need the network capabilities of a NAS when I can connect to my services through my own setup network.
 
+## 5/26/26
+The 4TB drive came in today!!
+I have spent the past 4 hrs copying over data, and reconfiguring raid. For future reference, if youre running an older system of QTS. Don't move the drives. RAID will be unliked and your share folders will mess up. Thankfully, the data is still all there it is just not easily accessible. I had to SSH into my QTS and initate a transfer to a new shared folder.
