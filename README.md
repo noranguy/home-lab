@@ -15,6 +15,6 @@ Additionally, I really wish to upgrade my specs. The drive failure scares were a
 That's all for now!
 
 # nico-home-lab homepage
-![nico's-home-lab-Homepage](assets/homepage.png)
+<img width="1667" height="1388" alt="homepage" src="https://github.com/user-attachments/assets/212a67fb-3927-4b4c-a40b-bb37a9a5ebb8" />
 # Setup Photo as of 5/25/26
-![My Setup](assets/setup.jpg)
+<img width="4284" height="5712" alt="setup" src="https://github.com/user-attachments/assets/2fb1686f-2d10-4902-8b3a-72973c374bca" />
