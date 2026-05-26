@@ -1,5 +1,5 @@
 site_name: nico's homelab docs
-site_url: https://noranguy.github.io/home-lab/
+site_description: Documentation for nico's homelab
 theme:
   name: material
   palette:
@@ -26,17 +26,30 @@ theme:
     - navigation.instant
     - navigation.tracking
   color_mode: dark
-  favicon: img/favicon.ico
+  favicon: assets/favicon.ico
   font:
     text: Roboto
     code: Roboto Mono
+
+# site_url: https://noranguy.github.io/home-lab/
 nav:
-  - Home: 
-    - Home: home/home.md
+  - Home: index.md
+  - Overview:
+    - Setup: home/setup.md
     - Current Implementations: home/current-implementations.md
     - Planned Implementations: home/planned-implementations.md
-  - About: blog/about.md
-  - Server Setup: 
+  - About: 
+    - About: blog/about.md
+    - Update Log: blog/update-log.md
+    - Struggles: blog/struggles.md
+  - Server Setup:
     - Server: server-setup/server-setup.md
     - Nextcloud: server-setup/nextcloud-setup.md
     - Cloudflare: server-setup/cloudflare-setup.md
+    - Audiobookshelf: server-setup/audiobookshelf-setup.md
+    - Jellyfin: server-setup/jellyfin-setup.md
+    - Calibre-Web: server-setup/calibre-web-setup.md
+    - Glance: server-setup/glance-setup.md
+    - Immich: server-setup/immich-setup.md
+    - Nginx Proxy Manager: server-setup/nginx-proxy-manager-setup.md
+    - Nicos-Linux-Cheat-Sheet: server-setup/nicos-linux-cheatsheet.md
