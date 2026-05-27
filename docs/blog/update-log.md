@@ -17,4 +17,13 @@ Additionally, I really wish to upgrade my specs. The drive failure scares were a
 
 ## 5/26/26
 The 4TB drive came in today!!
-I have spent the past 4 hrs copying over data, and reconfiguring raid. For future reference, if youre running an older system of QTS. Don't move the drives. RAID will be unliked and your share folders will mess up. Thankfully, the data is still all there it is just not easily accessible. I had to SSH into my QTS and initate a transfer to a new shared folder.
+I have spent the past 4 hrs copying over data, and reconfiguring raid. For future reference, if youre running an older system of QTS. Don't move the drives. RAID will be unliked and your share folders will mess up. Thankfully, the data is still all there it is just not easily accessible. I had to SSH into my QTS and initate a transfer to a new shared folder.  
+1:26am update so technidally the 27th. Started my ~300gb transfer for my google photos/ meta data. Thankfully, the NVME drive I have that stores the TAR files from google takeout made transfer to my server easy. I had some trouble uploading to immich UI.
+
+The commands i used for a bulk upload are logging into my immich account using my API key
+immich login http://localhost:2283 APIKEY
+
+immich upload --recursice /path/to/folder
+
+hashes, checks duplicates, and uploads.
+next time, im going to upload directly from a different folder instead of move everything into library admin. Will update on outcome. 
