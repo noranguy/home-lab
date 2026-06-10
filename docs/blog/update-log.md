@@ -27,3 +27,6 @@ immich upload --recursice /path/to/folder
 
 hashes, checks duplicates, and uploads.
 next time, im going to upload directly from a different folder instead of move everything into library admin. Will update on outcome. 
+
+## 6/9/26
+Got a new Dell Optiplex 7050 SFF. Currently configuring proxmox on it. I added a 1 TB NVME to it! Im using it as a storage pool for future containers and VMs. Tailscale is configured on nicos-beefy-server. i need to upgrade the ram eventually because it is sitting at 8GBs. Thanks!
